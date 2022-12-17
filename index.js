@@ -1,9 +1,11 @@
-let screen = document.getElementById("screen");
-buttons = document.querySelectorAll("button");
-let screenValue = "";
-for (item of buttons) {
-  item.addEventListener("click", (e) => {
-    buttonText = e.target.innerText;
-    console.log(buttonText);
-  });
-}
+const buttons = document.querySelectorAll(".btn-area>div");
+console.log(buttons); // returns a node list of all the buttons
+const display = document.querySelector(".display");
+console.log(display);
+
+const btnArr = Array.from(buttons); //convert node list to array
+console.log(btnArr);
+
+let displayValue = "";
+let operators = ["+", "-", "*", "/"];
+let lastOperator = "";
